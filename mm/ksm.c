@@ -236,7 +236,7 @@ static int ksm_nr_node_ids = 1;
 #define KSM_RUN_MERGE	1
 #define KSM_RUN_UNMERGE	2
 #define KSM_RUN_OFFLINE	4
-static unsigned long ksm_run = KSM_RUN_MERGE; //qus1 changed, for enable by default. def// KSM_RUN_STOP
+static unsigned long ksm_run = KSM_RUN_STOP; //qus1 will be changed to KSM_RUN_MERGE, for enable by default.
 static void wait_while_offlining(void);
 
 static DECLARE_WAIT_QUEUE_HEAD(ksm_thread_wait);
