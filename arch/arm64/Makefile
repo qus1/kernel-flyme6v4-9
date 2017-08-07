@@ -17,12 +17,6 @@ GZFLAGS		:=-9
 
 LIBGCC 		:= $(shell $(CC) $(KBUILD_CFLAGS) -print-libgcc-file-name)
 
-#zhuyu@wind-mobi.com 20150627 begin
-ifeq ($(strip $(CHINAUNICOM_CUSTOMIZE)), true)
-cflags-$(CONFIG_ARCH_MT6735) += -DISPALY_MODEM_FOR_CHINAUNICOM
-endif
-#zhuyu@wind-mobi.com 20150627 end
-
 KBUILD_DEFCONFIG := defconfig
 
 KBUILD_CFLAGS	+= -mgeneral-regs-only
